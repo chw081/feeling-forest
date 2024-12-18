@@ -31,7 +31,7 @@ const App = () => {
     <Router>
       <nav>
         <Link to="/">Home</Link> | <Link to="/forest">Forest</Link> |{" "}
-        <Link to="/journal">Journal</Link>
+        <Link to="/journal">Journal</Link> | <Link to='archive'>Archive</Link>
       </nav>
 
       <Routes>
