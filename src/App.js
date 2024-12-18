@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import MoodEntry from "./components/MoodEntry";
 import ForestView from "./components/ForestView";
 import DailyJournal from "./components/DailyJournal";
+import JournalArchive from "./components/JournalArchive";
+import './App.css';
 
 const App = () => {
   const [forest, setForest] = useState([]);
@@ -36,6 +38,7 @@ const App = () => {
         <Route path="/" element={<MoodEntry onSaveMood={saveMood} />} />
         <Route path="/forest" element={<ForestView forest={forest} />} />
         <Route path="/journal" element={<DailyJournal onSaveJournal={saveJournal} />} />
+        <Route path="/archive" element={<JournalArchive journals={journals} setJournals={setJournals} />} />
       </Routes>
     </Router>
   );
